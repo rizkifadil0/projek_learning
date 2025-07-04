@@ -34,7 +34,7 @@ class beli{
             cin.ignore(); //untuk membuang newline tersisa
     }
     void inputbarang(){
-        cout << "Pilihlah Barang yang anda ingin beli (1/2/3/4/5/6) : " << endl;
+        cout << "Pilihlah Barang yang anda ingin beli (1/2/3/4/5/6) : ";
             cin >> pilihanB;
 
             switch (pilihanB)

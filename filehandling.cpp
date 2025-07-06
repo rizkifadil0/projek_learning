@@ -1,9 +1,11 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
 int main(){
+    string tulis;
     ofstream file("biodata.txt"); // membuat/menulis ke file
 
     if (file.is_open()) {
@@ -17,5 +19,15 @@ int main(){
         cout << "gagal membuka file" << endl;
     }
 
-    return 0;
+    ifstream data("Data Mage.txt"); //membaca file
+
+    if (data.is_open()) {
+        cout << "=== Isi File ===" << endl;
+        while (getline(data, tulis)) {
+            cout << tulis << endl;
+        }
+        data.close();
+    } else {
+        cout << "File tidak bisa dibuka!" << endl;
+    }
 }
